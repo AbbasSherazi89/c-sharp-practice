@@ -59,10 +59,22 @@
 //}
 
 //Exercise 4:Ask user for a number and print its multiplication table (1-10).
-Console.WriteLine("Enter a number to print its multiplication table:");
-int num_mult = int.Parse(Console.ReadLine());
-for (int i=1; i<=10; i++)
-    { 
-    Console.WriteLine($"Table of {num_mult}: {num_mult} x {i} = {num_mult * i}");
-    }
+//Console.WriteLine("Enter a number to print its multiplication table:");
+//int num_mult = int.Parse(Console.ReadLine());
+//for (int i=1; i<=10; i++)
+//    { 
+//    Console.WriteLine($"Table of {num_mult}: {num_mult} x {i} = {num_mult * i}");
+//    }
 
+//Exercise 5: Count vowels(a, e, i, o, u) in a given string.
+
+string str_vowels = "Hello world";
+int count_vowels = 0;
+for (int i=0; i<str_vowels.Length; i++)
+{
+    if (str_vowels[i] == 'a' || str_vowels[i] == 'e' || str_vowels[i] == 'i' || str_vowels[i] == 'o' || str_vowels[i] == 'u' || str_vowels[i] == 'A' || str_vowels[i] == 'E' || str_vowels[i] == 'I' || str_vowels[i] == 'O' || str_vowels[i] == 'U')
+    {
+        count_vowels++;
+    }
+}
+Console.WriteLine($"Number of vowels in the string \"{str_vowels}\" is: {count_vowels}");
