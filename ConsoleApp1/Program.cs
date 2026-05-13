@@ -23,3 +23,23 @@ foreach(int i in numbers)
     Console.WriteLine("\n");
     Console.WriteLine(i);
 }
+
+//Exercise 1:Print all even numbers from 1 to 50 using a loop.
+Console.WriteLine("Even numbers from 1 to 50: \n");
+for (int i=0; i<=50; i++)
+{
+    if (i % 2 == 0)
+    {
+        Console.WriteLine(i);
+    }
+}
+
+//Exercise 2: Take user input and reverse it without using a arra.reverse method.
+
+ Console.WriteLine("Enter a string to reverse:");
+ string userInput = Console.ReadLine();
+
+for (int i=userInput.Length - 1; i >= 0; i-- )
+{
+            Console.Write(userInput[i]);
+}
