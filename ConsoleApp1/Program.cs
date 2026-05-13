@@ -46,15 +46,23 @@
 
 //Exercise 3: Create an array of 5 numbers and calculate their sum and average.
 
-int[] sum_averaged_arr = new int[5]{ 45, 22, 44, 55, 22 };
-int sum = 0;
-for (int i=0; i<sum_averaged_arr.Length; i++)
-{
-    sum+= sum_averaged_arr[i];
-    if (i == sum_averaged_arr.Length - 1)
-    {
-        Console.WriteLine("Sum of the array is:" + sum);
-        Console.WriteLine("Average of the array is:" + (sum / sum_averaged_arr.Length));
+//int[] sum_averaged_arr = new int[5]{ 45, 22, 44, 55, 22 };
+//int sum = 0;
+//for (int i=0; i<sum_averaged_arr.Length; i++)
+//{
+//    sum+= sum_averaged_arr[i];
+//    if (i == sum_averaged_arr.Length - 1)
+//    {
+//        Console.WriteLine("Sum of the array is:" + sum);
+//        Console.WriteLine("Average of the array is:" + (sum / sum_averaged_arr.Length));
+//    }
+//}
+
+//Exercise 4:Ask user for a number and print its multiplication table (1-10).
+Console.WriteLine("Enter a number to print its multiplication table:");
+int num_mult = int.Parse(Console.ReadLine());
+for (int i=1; i<=10; i++)
+    { 
+    Console.WriteLine($"Table of {num_mult}: {num_mult} x {i} = {num_mult * i}");
     }
-}
 
