@@ -80,23 +80,46 @@
 //}
 //Console.WriteLine($"Number of vowels in the string \"{str_vowels}\" is: {count_vowels}");
 
-//Exercise 6: Find the largest and smallest number in an array.
+////Exercise 6: Find the largest and smallest number in an array.
 
-int[] max_min_arr = { 45, 22, 44, 55, 22 };
-int max = max_min_arr[0];
-int min = max_min_arr[0];
+//int[] max_min_arr = { 45, 22, 44, 55, 22 };
+//int max = max_min_arr[0];
+//int min = max_min_arr[0];
 
-for (int i=0; i<max_min_arr.Length; i++)
+//for (int i=0; i<max_min_arr.Length; i++)
+//{
+//    if(max_min_arr[i] > max)
+//    {
+//        max = max_min_arr[i];
+//    }
+//    if(max_min_arr[i] < min)
+//    {
+//        min = max_min_arr[i];
+//    }
+//}
+//Console.WriteLine($"Original array: [{string.Join(", ", max_min_arr)}]");
+//Console.WriteLine($"Largest number in the array is: {max}");
+//Console.WriteLine($"Smallest number in the array is: {min}");
+
+// Exercise 7. (Palindrome Check) Check if a word reads the same backward (e.g., "radar", "level").
+Console.WriteLine("Enter a word to check if it's a palindrome:");
+string palindrome = Console.ReadLine();
+
+int left_text = 0;
+int right_text = palindrome.Length - 1;
+while (left_text < right_text)
 {
-    if(max_min_arr[i] > max)
+    if (palindrome[left_text] != palindrome[right_text])
     {
-        max = max_min_arr[i];
+        Console.WriteLine($"The word \"{palindrome}\" is not a palindrome.");
+        break;
     }
-    if(max_min_arr[i] < min)
-    {
-        min = max_min_arr[i];
-    }
+    left_text++;
+    right_text--;
 }
-Console.WriteLine($"Original array: [{string.Join(", ", max_min_arr)}]");
-Console.WriteLine($"Largest number in the array is: {max}");
-Console.WriteLine($"Smallest number in the array is: {min}");
+if (left_text >= right_text)
+{
+    Console.WriteLine($"The word \"{palindrome}\" is a palindrome.");
+}
+Console.WriteLine("\nPress any key to exit...");
+Console.ReadKey();
