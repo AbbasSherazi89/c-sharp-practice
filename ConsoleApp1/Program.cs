@@ -126,23 +126,43 @@
 
 // Exercise 8: Remove duplicates characters from a string
 
-void RemoveDuplicates(string input)
+//void RemoveDuplicates(string input)
+//{
+//    string result = "";
+//    for (int i = 0; i < input.Length; i++)
+//    {
+//        //Console.WriteLine(!input.Contains("ab"));
+//        if (!result.Contains(input[i]))
+//        {
+//            result += input[i];
+//        }
+//    }
+
+//    Console.WriteLine($"String after removing duplication is: ${result}");
+
+//}
+
+//Console.WriteLine("Enter a string to remove the duplicates from it:");
+//string input = Console.ReadLine();
+
+//RemoveDuplicates(input);
+
+// Exercise 9: Remove duplicates words from a string 
+void RemoveDuplicateWords(string input)
 {
-    string result = "";
-    for (int i = 0; i < input.Length; i++)
+    string[] result = {};
+    result = input.Split(" ");
+    string uniqueWords = "";
+    for (int i = 0; i < result.Length; i++)
     {
-        //Console.WriteLine(!input.Contains("ab"));
-        if (!result.Contains(input[i]))
+        if (!uniqueWords.ToLower().Contains(result[i]))
         {
-            result += input[i];
+            uniqueWords += result[i] + " ";
         }
     }
-
-    Console.WriteLine($"String after removing duplication is: ${result}");
+    Console.WriteLine($"String after removing duplicated words is: {uniqueWords}");
 
 }
 
-Console.WriteLine("Enter a string to remove the duplicates from it:");
-string input = Console.ReadLine();
-
-RemoveDuplicates(input);
+string inputString = "The Quaid was the founder the of Pakistan.";
+RemoveDuplicateWords(inputString);
