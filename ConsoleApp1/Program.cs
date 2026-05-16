@@ -102,24 +102,47 @@
 //Console.WriteLine($"Smallest number in the array is: {min}");
 
 // Exercise 7. (Palindrome Check) Check if a word reads the same backward (e.g., "radar", "level").
-Console.WriteLine("Enter a word to check if it's a palindrome:");
-string palindrome = Console.ReadLine();
+//Console.WriteLine("Enter a word to check if it's a palindrome:");
+//string palindrome = Console.ReadLine();
 
-int left_text = 0;
-int right_text = palindrome.Length - 1;
-while (left_text < right_text)
+//int left_text = 0;
+//int right_text = palindrome.Length - 1;
+//while (left_text < right_text)
+//{
+//    if (palindrome[left_text] != palindrome[right_text])
+//    {
+//        Console.WriteLine($"The word \"{palindrome}\" is not a palindrome.");
+//        break;
+//    }
+//    left_text++;
+//    right_text--;
+//}
+//if (left_text >= right_text)
+//{
+//    Console.WriteLine($"The word \"{palindrome}\" is a palindrome.");
+//}
+//Console.WriteLine("\nPress any key to exit...");
+//Console.ReadKey();
+
+// Exercise 8: Remove duplicates characters from a string
+
+void RemoveDuplicates(string input)
 {
-    if (palindrome[left_text] != palindrome[right_text])
+    string result = "";
+    for (int i = 0; i < input.Length; i++)
     {
-        Console.WriteLine($"The word \"{palindrome}\" is not a palindrome.");
-        break;
+        //Console.WriteLine(!input.Contains("ab"));
+        if (!result.Contains(input[i]))
+        {
+            result += input[i];
+        }
     }
-    left_text++;
-    right_text--;
+
+    Console.WriteLine($"String after removing duplication is: ${result}");
+
 }
-if (left_text >= right_text)
-{
-    Console.WriteLine($"The word \"{palindrome}\" is a palindrome.");
-}
-Console.WriteLine("\nPress any key to exit...");
-Console.ReadKey();
+
+Console.WriteLine("Enter a string to remove the duplicates from it:");
+string input = Console.ReadLine();
+
+RemoveDuplicates(input);
