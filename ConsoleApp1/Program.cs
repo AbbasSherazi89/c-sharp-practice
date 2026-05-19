@@ -147,22 +147,39 @@
 
 //RemoveDuplicates(input);
 
-// Exercise 9: Remove duplicates words from a string 
-void RemoveDuplicateWords(string input)
+//// Exercise 9: Remove duplicates words from a string 
+//void RemoveDuplicateWords(string input)
+//{
+//    string[] result = {};
+//    result = input.Split(" ");
+//    string uniqueWords = "";
+//    for (int i = 0; i < result.Length; i++)
+//    {
+//        if (!uniqueWords.ToLower().Contains(result[i]))
+//        {
+//            uniqueWords += result[i] + " ";
+//        }
+//    }
+//    Console.WriteLine($"String after removing duplicated words is: {uniqueWords}");
+
+//}
+
+//string inputString = "The Quaid was the founder the of Pakistan.";
+//RemoveDuplicateWords(inputString);
+
+// Exercise 10: (Matrix Addition) Create two 2D arrays (2x3) and add them element by element.
+int[,] numArr1 = { { 1, 3, 2 }, { 8, 3, 2 } };
+int[,] numArr2 = { { 7, 9, 8 }, { 9, 2, 5 } };
+int[,] resultArr = new int[2, 3];
+
+for (int i=0; i<numArr1.GetLength(0); i++)
 {
-    string[] result = {};
-    result = input.Split(" ");
-    string uniqueWords = "";
-    for (int i = 0; i < result.Length; i++)
+    for (int j=0; j< numArr1.GetLength(1); j++)
     {
-        if (!uniqueWords.ToLower().Contains(result[i]))
-        {
-            uniqueWords += result[i] + " ";
-        }
+        resultArr[i, j] = numArr1[i, j] + numArr2[i, j];
+        Console.Write(resultArr[i,j] + " ");
     }
-    Console.WriteLine($"String after removing duplicated words is: {uniqueWords}");
-
+    Console.WriteLine();
 }
-
-string inputString = "The Quaid was the founder the of Pakistan.";
-RemoveDuplicateWords(inputString);
+Console.WriteLine("\nPress any key to exit...");
+Console.ReadKey();
